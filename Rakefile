@@ -1,6 +1,6 @@
 
 task :update_submodules do
-  sh "git submodule foreach git pull"
+  sh "git submodule init && git submodule update"
 end
 
 task :update => [:update_submodules] do
