@@ -7,8 +7,6 @@ set ruler
 " Show line numbers
 set number
 
-" Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -75,7 +73,23 @@ map <leader>a :Ack<space>
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 " Invisible characters *********************************************************
-set listchars=trail:.,tab:>-,eol:$
+set listchars=tab:▸\ ,eol:¬
 set nolist
 map ,i :set list!<CR> " Toggle invisible chars"
+
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Textmate style indentation
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
 
