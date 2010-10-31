@@ -8,6 +8,7 @@ task :update => [:update_submodules] do
 end
 
 task :install do
+  sh "mkdir ~/.vim_swap"
   sh "ln -s #{File.dirname(__FILE__)} ~/.vim" 
   sh "ln -s #{File.dirname(__FILE__)}/gvimrc ~/.gvimrc"
   sh "ln -s #{File.dirname(__FILE__)}/vimrc ~/.vimrc"

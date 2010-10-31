@@ -25,6 +25,8 @@ set backspace=start,indent
 call pathogen#runtime_append_all_bundles()
 
 set nobackup
+set directory^=$HOME/.vim_swap//
+
 
 " Turn on highlighted search and syntax highlighting
 set hlsearch
