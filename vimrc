@@ -72,7 +72,7 @@ map <leader>a :Ack<space>
 " Session saving
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
-" Invisible characters *********************************************************
+" Invisible characters
 set listchars=tab:▸\ ,eol:¬
 set nolist
 map ,i :set list!<CR> " Toggle invisible chars"
