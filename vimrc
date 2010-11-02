@@ -36,6 +36,7 @@ let mapleader = ","
 
 " CommandT mapped to command + k
 map <D-k> :CommandT<CR>
+map <leader>k :CommandTFlush<CR>
 
 " Set up command for NERDTree
 map <leader>n :NERDTree<CR>
