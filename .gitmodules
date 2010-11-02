@@ -40,3 +40,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-ragtag"]
+	path = bundle/vim-ragtag
+	url = http://github.com/tpope/vim-ragtag.git
