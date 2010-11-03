@@ -94,3 +94,6 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
+if exists("$MYGVIMRC")
+  source $MYGVIMRC 
+endif
