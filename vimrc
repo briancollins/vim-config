@@ -73,7 +73,10 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 " Invisible characters
 set listchars=tab:▸\ ,eol:¬
 set nolist
-map ,i :set list!<CR> " Toggle invisible chars"
+map <leader>i :set list!<CR> " Toggle invisible chars"
+
+" Open terminal
+map <leader>t :ConqueTermVSplit zsh<CR>
 
 " disable arrow keys
 map <up> <nop>
