@@ -67,6 +67,9 @@ filetype plugin indent on
 " Enable omni completion
 set ofu=syntaxcomplete#Complete
 
+" Detect nginx.conf
+au BufNewFile,BufRead nginx.conf set filetype=nginx.conf
+
 map <leader>a :Ack<space>
 
 " Session saving
