@@ -83,16 +83,6 @@ map <leader>i :set list!<CR> " Toggle invisible chars"
 " Open terminal
 map <leader>t :ConqueTermVSplit zsh<CR>
 
-" disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
 " Escape insert mode with ctrl-s
 imap <c-s> <Esc>
 
@@ -110,4 +100,19 @@ if exists("$MYGVIMRC")
   source $MYGVIMRC 
 endif
 
+function! SuperCleverTab()
+  if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+    return "\<Tab>"
+  else
+    if &omnifunc != ''
+      return "\<C-X>\<C-O>"
+    elseif &dictionary != ''
+      return "\<C-K>"
+    else
+      return "\<C-N>"
+    endif
+  endif
+endfunction
+
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
