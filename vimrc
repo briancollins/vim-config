@@ -41,7 +41,7 @@ map <D-k> :CommandT<CR>
 map <leader>k :CommandTFlush<CR>
 
 " Set up command for NERDTree
-map <leader>n :NERDTree<CR>
+map <leader>n :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
 
 " Make backspace work the way it should
@@ -115,4 +115,7 @@ function! SuperCleverTab()
 endfunction
 
 inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+
+" Scroll when cursor is n lines from top or bottom
+set scrolloff=8
 

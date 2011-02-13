@@ -1,6 +1,6 @@
 set lines=73
 set columns=240
-colorscheme chlordane
+colorscheme jellybeans
 highlight NonText guifg=gray
 set gfn=Inconsolata:h13
 set guioptions=egmrt
