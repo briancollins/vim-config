@@ -9,6 +9,8 @@ set ruler
 " Show line numbers
 set number
 
+nnoremap <C-L> :nohl<CR><C-L>
+
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -25,7 +27,8 @@ set backspace=start,indent
 call pathogen#runtime_append_all_bundles()
 
 set nobackup
-set directory^=$HOME/.vim_swap//
+set nowritebackup
+set noswapfile
 
 
 " Turn on highlighted search and syntax highlighting
@@ -52,6 +55,7 @@ set whichwrap+=<,>,h,l
 
 " Make searches case-insensitive
 set ignorecase
+set smartcase
 
 " Make editing .vimrc easier
 map <leader>v :sp $MYVIMRC<CR>

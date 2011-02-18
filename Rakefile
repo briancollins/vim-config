@@ -4,7 +4,7 @@ task :update_submodules do
 end
 
 task :update => [:update_submodules] do
-  sh "cd #{File.dirname(__FILE__)}/bundle/Command-T; rvm --with-rubies 1.8.7 rake make"
+  sh "cd #{File.dirname(__FILE__)}/bundle/command-t; rvm --with-rubies 1.8.7 rake make"
 end
 
 task :install do
