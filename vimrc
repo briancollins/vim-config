@@ -1,3 +1,25 @@
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
+
+Bundle "git://git.wincent.com/command-t.git"
+Bundle "https://github.com/vim-ruby/vim-ruby.git"
+Bundle "https://github.com/tpope/vim-rails.git"
+Bundle "https://github.com/mileszs/ack.vim.git"
+Bundle "https://github.com/edsono/vim-matchit.git"
+Bundle "https://github.com/nanotech/jellybeans.vim.git"
+Bundle "https://github.com/tpope/vim-ragtag.git"
+Bundle "https://github.com/scrooloose/nerdtree.git"
+Bundle "https://github.com/msanders/snipmate.vim.git"
+Bundle "https://github.com/tpope/vim-fugitive.git"
+Bundle "https://github.com/xoebus/vim-gitcd"
+Bundle "https://github.com/pangloss/vim-javascript.git"
+Bundle "https://github.com/msanders/cocoa.vim.git"
+Bundle "https://github.com/briancollins/vim-jst.git"
+Bundle "https://github.com/vim-scripts/nginx.vim.git"
+Bundle "https://github.com/kana/vim-textobj-user.git"
+Bundle "https://github.com/nelstrom/vim-textobj-rubyblock.git"
+
+
 " no vi compatibility
 set nocompatible
 
@@ -9,6 +31,7 @@ set ruler
 " Show line numbers
 set number
 
+" Command to remove search highlights
 nnoremap <C-L> :nohl<CR><C-L>
 
 set novisualbell  " No blinking .
@@ -23,13 +46,10 @@ set autoindent
 set expandtab
 set backspace=start,indent
 
-" Import plugins from bundles directory
-call pathogen#runtime_append_all_bundles()
-
+" No swap files or backups
 set nobackup
 set nowritebackup
 set noswapfile
-
 
 " Turn on highlighted search and syntax highlighting
 set hlsearch
@@ -61,8 +81,6 @@ set smartcase
 map <leader>v :sp $MYVIMRC<CR>
 map <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-map <leader>R :sp ~/commands-to-remember<CR>
-
 " Generate a tags file in the current directory using Exuberant ctags
 map <leader>e :silent :! ctags --recurse --sort=yes;sort tags > tmptags;mv tmptags tags<CR>:exe ":echo 'tags generated'"<CR>
 
@@ -84,9 +102,6 @@ set listchars=tab:▸\ ,eol:¬
 set nolist
 map <leader>i :set list!<CR> " Toggle invisible chars"
 
-" Open terminal
-map <leader>t :ConqueTermVSplit zsh<CR>
-
 " Escape insert mode with ctrl-s
 imap <c-s> <Esc>
 
@@ -103,22 +118,6 @@ let vimclojure#ParenRainbow = 1
 if exists("$MYGVIMRC")
   source $MYGVIMRC 
 endif
-
-function! SuperCleverTab()
-  if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    if &omnifunc != ''
-      return "\<C-X>\<C-O>"
-    elseif &dictionary != ''
-      return "\<C-K>"
-    else
-      return "\<C-N>"
-    endif
-  endif
-endfunction
-
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
 " Scroll when cursor is n lines from top or bottom
 set scrolloff=8
