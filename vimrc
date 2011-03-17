@@ -18,6 +18,10 @@ Bundle "https://github.com/briancollins/vim-jst.git"
 Bundle "https://github.com/vim-scripts/nginx.vim.git"
 Bundle "https://github.com/kana/vim-textobj-user.git"
 Bundle "https://github.com/nelstrom/vim-textobj-rubyblock.git"
+Bundle "https://github.com/hallettj/jslint.vim.git"
+Bundle "https://github.com/Rip-Rip/clang_complete.git"
+Bundle "https://github.com/tpope/vim-surround.git"
+Bundle "https://github.com/tpope/vim-repeat"
 
 
 " no vi compatibility
@@ -91,6 +95,7 @@ set ofu=syntaxcomplete#Complete
 
 " Detect nginx.conf
 au BufNewFile,BufRead nginx.conf set filetype=nginx.conf
+au BufNewFile,BufRead *.m        set filetype=objc
 
 map <leader>a :Ack<space>
 
