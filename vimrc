@@ -1,7 +1,7 @@
 set rtp+=~/.vim/vundle.git/ 
 call vundle#rc()
 
-Bundle "git://git.wincent.com/command-t.git"
+Bundle "https://github.com/briancollins/Command-T.git"
 Bundle "https://github.com/vim-ruby/vim-ruby.git"
 Bundle "https://github.com/tpope/vim-rails.git"
 Bundle "https://github.com/mileszs/ack.vim.git"
@@ -12,7 +12,6 @@ Bundle "https://github.com/scrooloose/nerdtree.git"
 Bundle "https://github.com/msanders/snipmate.vim.git"
 Bundle "https://github.com/tpope/vim-fugitive.git"
 Bundle "https://github.com/xoebus/vim-gitcd"
-Bundle "https://github.com/pangloss/vim-javascript.git"
 Bundle "https://github.com/msanders/cocoa.vim.git"
 Bundle "https://github.com/briancollins/vim-jst.git"
 Bundle "https://github.com/vim-scripts/nginx.vim.git"
@@ -22,7 +21,12 @@ Bundle "https://github.com/hallettj/jslint.vim.git"
 Bundle "https://github.com/Rip-Rip/clang_complete.git"
 Bundle "https://github.com/tpope/vim-surround.git"
 Bundle "https://github.com/tpope/vim-repeat"
+Bundle "https://github.com/kchmck/vim-coffee-script.git"
+Bundle "https://github.com/kingbin/vim-arduino.git"
+Bundle "https://github.com/vim-scripts/JavaScript-Indent.git"
+Bundle "https://github.com/vim-scripts/python.vim.git"
 
+let $JS_CMD='node'
 
 " no vi compatibility
 set nocompatible
@@ -41,14 +45,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
-
-" Use 2 spaces for tabs, turn on automatic indenting
-set tabstop=2
-set smarttab
-set shiftwidth=2
-set autoindent
-set expandtab
-set backspace=start,indent
 
 " No swap files or backups
 set nobackup
@@ -127,3 +123,11 @@ endif
 " Scroll when cursor is n lines from top or bottom
 set scrolloff=8
 
+set noeol
+set binary
+
+set softtabstop=2
+set shiftwidth=2
+set autoindent
+set expandtab
+set backspace=start,indent
